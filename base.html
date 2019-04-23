@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PBH | Dashboard</title>
+<style>
+input[type=text],[type = email],[type = number],textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+select{
+    width: 300px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+input[type=text]:focus,[type=number]:focus,[type=email]:focus,textarea:focus{
+    background-color: #ddd;
+    outline: none;
+}
+.button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+header {
+    height: 110px;
+    width: 100%;
+    padding-top: 1px;
+    background-color: black;
+    color: red;
+}
+header p {
+    font-size: 35px;
+    padding-left: 30px;
+}
+nav{
+    float :left;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 205px;
+      height: 1067px;
+    background-color: grey;
+}
+/*ul li{
+  background-color: grey
+}*/
+
+li a {
+    display: block;
+    color: #000;
+    padding: 20px 16px;
+    font-size: 25px;
+    text-decoration: none;
+}
+article {
+    float: left;
+    padding-left: 35px;
+    padding-top: 25px;
+
+}
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+div.card {
+  width:300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+}
+
+div.container {
+    padding: 10px;
+}
+
+</style>
+</head>
+<body>
+<header><p align="center">PES UNIVERSITY BOYS HOSTEL</p>
+</header>
+<section>
+    <nav>
+<ul>
+  <li><a href="{% url 'profile' %}">Dashboard</a></li>
+  <li><a href="{% url 'profile' %}">Profile</a></li>
+  <li><a href="{% url 'leave_application' %}">Leave Application</a></li>
+  <li><a href="{% url 'complaint' %}">Complaint</a></li>
+  <li><a href="{% url 'index' %}">Logout</a></li>
+</ul>
+</nav>
+</section>
+<article>
+  
+
+  
+{% block content%}
+{% endblock %}
+
+</article>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+{% extends 'system/base1.html' %}
+ <article>
+ 	{% block content %}
+ <table border="" cellpadding="2" cellspacing="0" frame="all" rules="all" style="border-color: purple;border-width: 2px">
+<thead>
+<tr>
+  
+  <th>Student Name</th>
+  <th>Block</th>
+  <th>Room No</th>
+  <th>Where to</th>
+  <th>Mobile No</th>
+  <th>Parent Name </th>
+  <th>Parent Mobile No</th>
+  <th>Leaving Date</th>
+  <th>Arriving Date</th>
+</tr>
+</thead>
+<tbody>
+  
+{% for post in posts %}
+    
+<tr>
+	<td>{{ post.name }}</td>
+	<td>{{ post.block }}</td>
+	<td>{{ post.room_no }}</td>
+	<td>{{ post.whereto }}</td>
+	<td>{{ post.stu_mob_no }}</td>
+  	<td>{{ post.parent_name }}</td>
+  	<td>{{ post.par_mob_no }}</td>
+  	<td>{{ post.leaving_date }}</td>
+  	<td>{{ post.arriving_date }}</td>
+
+
+
+</tr>
+{% endfor %}  
+
+
+
+</tbody>
+</table>
+{% endblock %}
+</article>
+
+
+
+
+
+
+
+

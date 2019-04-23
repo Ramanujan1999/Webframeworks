@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
+	<title>PBH | HOME</title>
+	<style>
+body {
+    margin: 0;
+}
+header {
+  height: 110px;
+  width: 100%;
+  padding-top: 1px;
+  background-color: black;
+  color: red;
+}
+nav{
+  float :left;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color:#999999;
+    position: fixed;
+    height: 448px;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 3px 16px;
+    text-decoration: none;
+
+}
+li a:hover:not(.active) {
+    background-color: black;
+    color: white;
+}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+.mySlides {display:none;}
+
+
+</style>
+</head>
+<body>
+  {% load static %}
+<div style="margin-left: 2px;">
+	<div style="width: 1225px;height: 150px;background-color: black;padding-top: 1px;">
+		<img src="{%static 'system/logo.png'%}" width="110px" height="110px" style="margin-top: 18px;margin-left:25%" align="left">
+		<p style="font-size: 35px;margin-top: 35px;color: white;font-family: 'Diplomata SC', cursive;"> &nbsp;&nbsp;PES UNVERSITY<br>&nbsp;&nbsp; BOYS HOSTEL</p>
+	</div>
+</div>
+<nav>
+<ul style="margin-left: 2px;">
+  <li><a href=""><p style="font-size: 20px">Home</p></a></li>
+  <li><a href="{% url 'student_registration' %}"><p style="font-size: 20px">Student Registration</p></a></li>
+  <li><a href="{% url 'login_view' %}"><p style="font-size: 20px">Student Login</p></a></li>
+  <li><a href="{% url 'admin_login' %}"><p style="font-size: 20px">Admin Login</p></a></li>
+  <li><a href="{% url 'about' %}"><p style="font-size: 20px">About Hostel</p></a></li>
+  <li><a href="{% url 'contact' %}"><p style="font-size: 20px">Contact Us</p></a></li>
+</ul>
+</nav>
+<article>
+<div class="w3-content w3-section" style="width:1005px;height :15px;padding-left: 186px">
+  <img class="mySlides" src=" {%static 'system/3.jpg'%}" style="width:103.5%;height: 448px">
+  <img class="mySlides" src="{%static 'system/4.jpg'%}"  style="width:103.5%;height: 448px">
+  <img class="mySlides" src="{%static 'system/hos.jpg'%}" style="width:103.5%;height: 448px">
+</div>
+</article>
+
+<script>
+var myIndex = 0;
+Change();
+
+function Change() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(Change, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html>

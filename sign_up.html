@@ -1,0 +1,93 @@
+
+
+   
+    
+   
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style>
+		div {
+			display: inline-grid;
+		}
+		input[type=text],[type=date],[type=email],[type=number], select {
+		    width: 75%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		input[type=text]{
+		    width: 75%;
+		    padding: 9px 20px;
+		    padding-left: 100px;
+		    margin: 10px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		input[type=submit] {
+		    width: 50%;
+		    background-color: #4CAF50;
+		    color: white;
+		    padding: 14px 20px;
+		    margin: 8px 0;
+		    border: none;
+		    border-radius: 4px;
+		    cursor: pointer;
+		}
+		input[type=password]{
+		    width: 40%;
+		    padding: 12px 20px;
+		    margin: 8px 0;
+		    display: inline-block;
+		    border: 1px solid #ccc;
+		    border-radius: 4px;
+		    box-sizing: border-box;
+		}
+		fieldset{
+			background-color:  #f2f2f2;
+			width:1000px;
+			padding-left: 25px;			
+		}
+		.hello {
+		    background-color: #4CAF50; /* Green */
+		    border: none;
+		    color: white;
+		    padding: 15px 32px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 16px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		    -webkit-transition-duration: 0.4s; /* Safari */
+		    transition-duration: 0.4s;
+		}
+
+		
+	</style>
+	
+</head>
+<body style="">
+	<p align="center" style="font-size: 40px;color:red;margin-top: 25px;">REGISTRATION FORM</p>
+	<center>
+	<fieldset>
+	<form method="POST">
+		{% csrf_token %}
+       
+        {{ form.as_p }}
+
+        <center><button type="submit" class="hello">Submit</button></center>
+    </form>
+    </fieldset>
+</center>
+</body>
+</html>

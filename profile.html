@@ -1,0 +1,10 @@
+{% extends 'system/base.html' %}
+
+{% load static%}
+<article>
+  {% block content%}
+    <p>Hello</p>
+    <a href="{% url 'profile' %}" style="text-decoration: none">See more Details.</a>
+  
+  {% endblock %}
+</article>

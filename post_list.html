@@ -1,0 +1,59 @@
+{% extends 'system/base1.html' %}
+
+
+
+
+
+<article>
+
+{% block content %}
+
+ <table border="" cellpadding="8" cellspacing="0" frame="all" rules="all" style="border-color: purple;border-width: 2px">
+
+<thead>
+<tr>
+  
+  <th>Student Name</th>
+  <th>Mobile No</th>
+  <th>SRN</th>
+  <th>LG Name</th>
+  <th>LG Mobile No</th>
+  
+  
+</tr>
+</thead>
+<tbody>
+  
+{% for post in posts %}
+    
+<tr>
+	<td>{{ post.name }}</td>
+	<td>{{ post.mobile }}</td>
+	<td>{{ post.srn }}</td>
+	<td>{{ post.gname }}</td>
+	<td>{{ post.gmobile }}</td>
+  	
+
+
+
+</tr>
+{% endfor %}  
+
+
+
+</tbody>
+</table>
+
+{% endblock %}
+
+</article>
+
+
+
+
+
+
+
+
+
+

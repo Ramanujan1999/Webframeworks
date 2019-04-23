@@ -1,0 +1,16 @@
+{% extends 'system/base.html' %}
+
+  
+
+<article>
+  {% block content%}
+
+  <h1 style="padding-left: 318px">LEAVE APPLICATION</h1>
+  <form method="POST" action="">{% csrf_token %}
+    {{form.as_p}}
+      <center><input type="submit" value="SUBMIT" class="button" id="hello"></center>
+    
+    </form>  
+    {% endblock %}
+</article>
+
